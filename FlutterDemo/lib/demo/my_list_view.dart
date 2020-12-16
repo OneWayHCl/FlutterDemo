@@ -1,12 +1,30 @@
 import 'package:flutter/material.dart';
+import '../data/post.dart';
 
 class MyListView extends StatelessWidget {
-  const MyListView({Key key}) : super(key: key);
+  final List<Post> items;
+  const MyListView({Key key, @required this.items}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return ListView(
-      children: [Text('测试1'), Text('测试2'), Text('测试3')],
+      children: List.generate(
+          items.length,
+          (index) => Container(
+                height: 240.0,
+                color: Colors.lightBlue,
+                child: Column(
+                  children: [
+                    Text('${items[index].title}'),
+                    Image.network(
+                      '${items[index].imageUrl}',
+                      fit: BoxFit.fitHeight,
+                      height: 200.0,
+                    ),
+                    Divider()
+                  ],
+                ),
+              )),
     );
   }
 }

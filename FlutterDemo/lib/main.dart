@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'demo/bottom_navigation_bar_demo.dart';
 import 'demo/drawer_demo.dart';
-// import 'demo/my_list_view.dart';
+import 'demo/my_list_view.dart';
 import 'demo/test_view.dart';
 import 'demo/basic_demo.dart';
+import 'data/post.dart';
 // import 'demo/bottom_bar.dart';
 //debug
 
@@ -27,21 +28,25 @@ class MyApp extends StatelessWidget {
                     centerTitle: true,
                     title: Text(
                       '你好,Flutter',
-                      style: TextStyle(color: Colors.orange),
+                      style: TextStyle(color: Colors.red),
                     ),
-                    // leading: IconButton(
-                    //     icon: Icon(Icons.menu),
-                    //     onPressed: () => debugPrint('Left button is pressed.')),
+                    leading: Builder(
+                        builder: (context) => IconButton(
+                              icon: Icon(Icons.menu),
+                              onPressed: () =>
+                                  Scaffold.of(context).openDrawer(),
+                            )),
                     actions: [
                       IconButton(
                           icon: Icon(Icons.search),
                           onPressed: () =>
                               debugPrint('Search button is pressed.')),
-                      IconButton(
-                          icon: Icon(Icons.more_horiz),
-                          onPressed: () {
-                            debugPrint('Search button is pressed.');
-                          }),
+                      Builder(
+                          builder: (context) => IconButton(
+                              icon: Icon(Icons.more_horiz),
+                              onPressed: () {
+                                Scaffold.of(context).openEndDrawer();
+                              }))
                     ],
                     bottom: TabBar(
                         unselectedLabelColor: Colors.black45,
@@ -58,7 +63,9 @@ class MyApp extends StatelessWidget {
                   body: TabBarView(
                     children: [
                       MyTestView1(),
-                      MyTestView2(),
+                      MyListView(
+                        items: posts,
+                      ),
                       MyTestView3(),
                       BasicDemo(),
                     ],

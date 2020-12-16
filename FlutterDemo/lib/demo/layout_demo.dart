@@ -10,6 +10,20 @@ class LayoutDemo extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          SizedBox(
+              width: 300.0,
+              height: 200.0,
+              child: Container(
+                alignment: Alignment(0.6, -0.8),
+                decoration: BoxDecoration(
+                    color: Colors.lightBlue,
+                    borderRadius: BorderRadius.circular(12.0)),
+                child: Icon(
+                  Icons.settings,
+                  color: Colors.white,
+                  size: 50.0,
+                ),
+              )),
           ConstrainedBox(
             constraints: BoxConstraints(minHeight: 100.0, maxWidth: 70.0),
             child: Container(
@@ -30,12 +44,7 @@ class LayoutDemo extends StatelessWidget {
             color: Colors.lightBlue,
             child: Icon(Icons.favorite),
           ),
-          Container(
-            width: 50.0,
-            height: 50.0,
-            color: Colors.lightBlue,
-            child: Icon(Icons.settings),
-          )
+          // Positioned(right: 20.0, bottom: 20.0, child: Icon(Icons.pool)) //Stack里面使用
         ],
       ),
     );
