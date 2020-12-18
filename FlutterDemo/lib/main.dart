@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'demo/bottom_navigation_bar_demo.dart';
 import 'demo/drawer_demo.dart';
 import 'demo/my_list_view.dart';
+import 'demo/page_view_demo.dart';
+import 'demo/grid_view_demo.dart';
 import 'demo/test_view.dart';
 import 'demo/basic_demo.dart';
 import 'data/post.dart';
@@ -66,7 +68,7 @@ class MyApp extends StatelessWidget {
                       MyListView(
                         items: posts,
                       ),
-                      MyTestView3(),
+                      GridViewDemo(), //or ViewDemo(),
                       BasicDemo(),
                     ],
                   ),
