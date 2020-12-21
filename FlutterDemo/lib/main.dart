@@ -4,11 +4,10 @@ import 'demo/drawer_demo.dart';
 import 'demo/my_list_view.dart';
 import 'demo/page_view_demo.dart';
 import 'demo/grid_view_demo.dart';
+import 'demo/sliver_view_demo.dart';
 import 'demo/test_view.dart';
 import 'demo/basic_demo.dart';
 import 'data/post.dart';
-// import 'demo/bottom_bar.dart';
-//debug
 
 void main() {
   runApp(MyApp());
@@ -68,7 +67,7 @@ class MyApp extends StatelessWidget {
                       MyListView(
                         items: posts,
                       ),
-                      GridViewDemo(), //or ViewDemo(),
+                      SliverViewDemo(), //GridViewDemo(), //or ViewDemo(),
                       BasicDemo(),
                     ],
                   ),
