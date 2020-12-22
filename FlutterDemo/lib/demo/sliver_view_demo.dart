@@ -1,4 +1,5 @@
 import 'package:FlutterDemo/data/post.dart';
+import 'package:FlutterDemo/demo/post_description.dart';
 import 'package:flutter/material.dart';
 
 class SliverViewDemo extends StatelessWidget {
@@ -63,7 +64,21 @@ class SliverListDemo extends StatelessWidget {
                             color: Colors.red,
                             fontSize: 20,
                             fontWeight: FontWeight.bold),
-                      ))
+                      )),
+                  Positioned.fill(
+                      child: Material(
+                    color: Colors.transparent,
+                    child: InkWell(
+                      splashColor: Colors.white.withOpacity(0.3),
+                      highlightColor: Colors.white.withOpacity(0.1),
+                      onTap: () {
+                        Navigator.pushNamed(context, '/detail');
+                        // Navigator.of(context).push(MaterialPageRoute(
+                        //     builder: (context) =>
+                        //         PostShow(post: posts[index])));
+                      },
+                    ),
+                  ))
                 ],
               )));
     }, childCount: posts.length));
