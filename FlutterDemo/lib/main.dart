@@ -10,6 +10,7 @@ import 'demo/test_view.dart';
 import 'demo/basic_demo.dart';
 import 'data/post.dart';
 import 'demo/from_demo.dart';
+import 'demo/material_components.dart';
 
 void main() {
   runApp(MyApp());
@@ -34,11 +35,13 @@ class _HomePageState extends State<HomePage> {
         title: '',
         debugShowCheckedModeBanner: false,
         theme: ThemeData(primarySwatch: Colors.lightBlue),
+        // initialRoute: '/mtc',
         routes: {
           '/detail': (context) => PostShow(post: posts[0]),
           '/from': (context) => FromDemo(),
+          '/mtc': (context) => MaterialComponentDemo()
         },
-        home: FromDemo()
+        home: MaterialComponentDemo()
         // Tabs()
         // DefaultTabController(
         //     length: 4,
