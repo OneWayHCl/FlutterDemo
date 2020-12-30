@@ -1,8 +1,13 @@
 import 'package:FlutterDemo/demo/simple_dialog_demo.dart';
+import 'package:FlutterDemo/demo/stepper_demo.dart';
 import 'package:flutter/material.dart';
 import 'button_demo.dart';
+import 'card_demo.dart';
+import 'chip_demo.dart';
+import 'data_table_demo.dart';
 import 'date_time_demo.dart';
 import 'float_action_button.dart';
+import 'paginated_table_demo.dart';
 import 'popup_menu_button.dart';
 import 'from_demo.dart';
 import 'checkbox_demo.dart';
@@ -24,6 +29,11 @@ class MaterialComponentDemo extends StatelessWidget {
           ListItem(title: 'CheckboxDemo', page: CheckboxDemo()),
           ListItem(title: 'DateTimeDemo', page: DateTimeDemo()),
           ListItem(title: 'SimpleDialogDemo', page: SimpleDialogDemo()),
+          ListItem(title: 'ChipDemo', page: ChipDemo()),
+          ListItem(title: 'DataTableDemo', page: DataTableDemo()),
+          ListItem(title: 'PaginatedTableDemo', page: PaginatedTableDemo()),
+          ListItem(title: 'CardDemo', page: CardDemo()),
+          ListItem(title: 'StepperDemo', page: StepperDemo()),
         ],
       ),
     );

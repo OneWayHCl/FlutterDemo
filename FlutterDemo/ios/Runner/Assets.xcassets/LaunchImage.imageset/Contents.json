@@ -1,26 +1,31 @@
 {
   "images" : [
     {
+      "filename" : "1242-2208.jpg",
       "idiom" : "iphone",
       "scale" : "3x",
       "subtype" : "736h"
     },
     {
+      "filename" : "750-1334.jpg",
       "idiom" : "iphone",
       "scale" : "2x",
       "subtype" : "667h"
     },
     {
+      "filename" : "1125-2436.jpg",
       "idiom" : "iphone",
       "scale" : "3x",
       "subtype" : "2436h"
     },
     {
+      "filename" : "1125-2437.jpg",
       "idiom" : "iphone",
       "scale" : "3x",
       "subtype" : "2688h"
     },
     {
+      "filename" : "1125-2438.jpg",
       "idiom" : "iphone",
       "scale" : "2x",
       "subtype" : "1792h"
