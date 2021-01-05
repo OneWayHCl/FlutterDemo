@@ -7,6 +7,8 @@ import 'demo/page_view_demo.dart';
 import 'demo/grid_view_demo.dart';
 import 'demo/sliver_view_demo.dart';
 import 'demo/state/state_mgr_demo.dart';
+import 'demo/stream/stream_demo.dart';
+import 'demo/stream/strem_mutiny_demo.dart';
 import 'demo/test_view.dart';
 import 'demo/basic_demo.dart';
 import 'data/post.dart';
@@ -36,13 +38,14 @@ class _HomePageState extends State<HomePage> {
       title: '',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(primarySwatch: Colors.lightBlue),
-      // initialRoute: '/mtc',
+      // initialRoute: '/stream',
       routes: {
         '/detail': (context) => PostShow(post: posts[0]),
         '/from': (context) => FromDemo(),
-        '/mtc': (context) => MaterialComponentDemo()
+        '/mtc': (context) => MaterialComponentDemo(),
+        '/stream': (context) => StreamDemo()
       },
-      home: StateMgrDemmo(),
+      home: StreamMutDemo(),
       // home: MaterialComponentDemo()
       // Tabs()
       // DefaultTabController(
