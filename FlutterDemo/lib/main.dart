@@ -5,6 +5,7 @@ import 'demo/drawer_demo.dart';
 import 'demo/my_list_view.dart';
 import 'demo/page_view_demo.dart';
 import 'demo/grid_view_demo.dart';
+import 'demo/rxdart/rxdart_demo.dart';
 import 'demo/sliver_view_demo.dart';
 import 'demo/state/state_mgr_demo.dart';
 import 'demo/stream/stream_demo.dart';
@@ -45,7 +46,7 @@ class _HomePageState extends State<HomePage> {
         '/mtc': (context) => MaterialComponentDemo(),
         '/stream': (context) => StreamDemo()
       },
-      home: StreamMutDemo(),
+      home: RxDartDemo(),
       // home: MaterialComponentDemo()
       // Tabs()
       // DefaultTabController(
