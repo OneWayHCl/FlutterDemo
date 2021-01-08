@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'demo/bottom_navigation_bar_demo.dart';
 import 'demo/drawer_demo.dart';
 import 'demo/my_list_view.dart';
+import 'demo/network/network_demo.dart';
 import 'demo/page_view_demo.dart';
 import 'demo/grid_view_demo.dart';
 import 'demo/rxdart/rxdart_demo.dart';
@@ -46,7 +47,7 @@ class _HomePageState extends State<HomePage> {
         '/mtc': (context) => MaterialComponentDemo(),
         '/stream': (context) => StreamDemo()
       },
-      home: RxDartDemo(),
+      home: NetworkDemo(),
       // home: MaterialComponentDemo()
       // Tabs()
       // DefaultTabController(
