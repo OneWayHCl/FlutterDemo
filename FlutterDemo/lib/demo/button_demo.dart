@@ -30,12 +30,15 @@ class ButtonDemo extends StatelessWidget {
           data: Theme.of(context).copyWith(
               buttonColor: Theme.of(context).accentColor,
               buttonTheme: ButtonThemeData(
-                  textTheme: ButtonTextTheme.primary,
-                  // shape: StadiumBorder(),
-                  shape: BeveledRectangleBorder(
-                      borderRadius: BorderRadius.circular(10.0)))),
+                textTheme: ButtonTextTheme.primary,
+                shape: StadiumBorder(),
+                // shape: BeveledRectangleBorder(
+                //     borderRadius: BorderRadius.circular(10.0))
+              )),
           child: RaisedButton(
-            onPressed: () {},
+            onPressed: () {
+              print('圆角按钮');
+            },
             child: Text('Button'),
             splashColor: Colors.red,
             elevation: 0.0,
