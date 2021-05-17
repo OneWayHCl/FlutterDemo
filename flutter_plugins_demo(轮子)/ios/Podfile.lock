@@ -1,0 +1,35 @@
+PODS:
+  - Flutter (2.0.0)
+  - flutter_webview_plugin (0.0.1):
+    - Flutter
+  - image_picker (0.0.1):
+    - Flutter
+  - liquid_swipe (0.0.1):
+    - Flutter
+
+DEPENDENCIES:
+  - flutter_webview_plugin (from `.symlinks/plugins/flutter_webview_plugin/ios`)
+  - image_picker (from `.symlinks/plugins/image_picker/ios`)
+  - liquid_swipe (from `.symlinks/plugins/liquid_swipe/ios`)
+
+SPEC REPOS:
+  trunk:
+    - Flutter
+
+EXTERNAL SOURCES:
+  flutter_webview_plugin:
+    :path: ".symlinks/plugins/flutter_webview_plugin/ios"
+  image_picker:
+    :path: ".symlinks/plugins/image_picker/ios"
+  liquid_swipe:
+    :path: ".symlinks/plugins/liquid_swipe/ios"
+
+SPEC CHECKSUMS:
+  Flutter: 1c17b7bc8cd10f9f85f9dbc56caee3074756daad
+  flutter_webview_plugin: ed9e8a6a96baf0c867e90e1bce2673913eeac694
+  image_picker: e3eacd46b94694dde7cf2705955cece853aa1a8f
+  liquid_swipe: d3dbe523989a927528e7e7d2d0fc674da90cbbf7
+
+PODFILE CHECKSUM: 34af146a23453d57898facf62cd790d33544f2bb
+
+COCOAPODS: 1.10.0

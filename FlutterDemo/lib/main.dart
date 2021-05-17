@@ -49,66 +49,63 @@ class _HomePageState extends State<HomePage> {
           '/stream': (context) => StreamDemo()
         },
         // home: AnimationDemo(),
-        home: MaterialComponentDemo()
+        // home: MaterialComponentDemo()
         // Tabs()
-        // DefaultTabController(
-        //     length: 4,
-        //     child: Scaffold(
-        //       appBar: AppBar(
-        //         centerTitle: true,
-        //         title: Text(
-        //           '你好,Flutter',
-        //           style: TextStyle(color: Colors.red),
-        //         ),
-        //         leading: Builder(
-        //             builder: (context) => IconButton(
-        //                   icon: Icon(Icons.menu),
-        //                   onPressed: () =>
-        //                       Scaffold.of(context).openDrawer(),
-        //                 )),
-        //         actions: [
-        //           IconButton(
-        //               icon: Icon(Icons.search),
-        //               onPressed: () =>
-        //                   debugPrint('Search button is pressed.')),
-        //           Builder(
-        //               builder: (context) => IconButton(
-        //                   icon: Icon(Icons.more_horiz),
-        //                   onPressed: () {
-        //                     Scaffold.of(context).openEndDrawer();
-        //                   }))
-        //         ],
-        //         bottom: TabBar(
-        //             unselectedLabelColor: Colors.black45,
-        //             labelColor: Colors.black87,
-        //             tabs: [
-        //               Tab(icon: Icon(Icons.local_florist)),
-        //               Tab(icon: Icon(Icons.change_history)),
-        //               Tab(icon: Icon(Icons.directions_bike)),
-        //               Tab(icon: Icon(Icons.view_quilt)),
-        //             ]),
-        //       ),
-        //       drawer: DrawerDemo(),
-        //       endDrawer: DrawerDemo(),
-        //       body: TabBarView(
-        //         children: [
-        //           MyTestView1(),
-        //           MyListView(
-        //             items: posts,
-        //           ),
-        //           SliverViewDemo(), //GridViewDemo(), //or ViewDemo(),
-        //           BasicDemo(),
-        //         ],
-        //       ),
-        //       floatingActionButton: FloatingActionButton(
-        //         child: Text('From'),
-        //         onPressed: () {
-        //           Navigator.of(context).push(
-        //               MaterialPageRoute(builder: (context) => FromDemo()));
-        //         },
-        //       ),
-        //       bottomNavigationBar: BottomNavigationBarDemo(),
-        //     ))
-        );
+        home: DefaultTabController(
+            length: 4,
+            child: Scaffold(
+              appBar: AppBar(
+                centerTitle: true,
+                title: Text(
+                  '你好,Flutter',
+                  style: TextStyle(color: Colors.red),
+                ),
+                leading: Builder(
+                    builder: (context) => IconButton(
+                          icon: Icon(Icons.menu),
+                          onPressed: () => Scaffold.of(context).openDrawer(),
+                        )),
+                actions: [
+                  IconButton(
+                      icon: Icon(Icons.search),
+                      onPressed: () => debugPrint('Search button is pressed.')),
+                  Builder(
+                      builder: (context) => IconButton(
+                          icon: Icon(Icons.more_horiz),
+                          onPressed: () {
+                            Scaffold.of(context).openEndDrawer();
+                          }))
+                ],
+                bottom: TabBar(
+                    unselectedLabelColor: Colors.black45,
+                    labelColor: Colors.black87,
+                    tabs: [
+                      Tab(icon: Icon(Icons.local_florist)),
+                      Tab(icon: Icon(Icons.change_history)),
+                      Tab(icon: Icon(Icons.directions_bike)),
+                      Tab(icon: Icon(Icons.view_quilt)),
+                    ]),
+              ),
+              drawer: DrawerDemo(),
+              endDrawer: DrawerDemo(),
+              body: TabBarView(
+                children: [
+                  MyTestView1(),
+                  MyListView(
+                    items: posts,
+                  ),
+                  SliverViewDemo(), //GridViewDemo(), //or ViewDemo(),
+                  BasicDemo(),
+                ],
+              ),
+              floatingActionButton: FloatingActionButton(
+                child: Text('From'),
+                onPressed: () {
+                  Navigator.of(context).push(
+                      MaterialPageRoute(builder: (context) => FromDemo()));
+                },
+              ),
+              // bottomNavigationBar: BottomNavigationBarDemo(),
+            )));
   }
 }
